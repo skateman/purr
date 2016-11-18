@@ -1,0 +1,22 @@
+Metrics/PerceivedComplexity:
+  Enabled: false
+Metrics/CyclomaticComplexity:
+  Enabled: false
+Metrics/AbcSize:
+  Enabled: false
+Style/RedundantFreeze:
+  Enabled: false
+Style/IndentationConsistency:
+  EnforcedStyle: normal
+Metrics/LineLength:
+  Max: 140
+Style/HashSyntax:
+  EnforcedStyle: hash_rockets
+Documentation:
+  Enabled: false
+Metrics/MethodLength:
+  Max: 20
+Style/FileName:
+  Exclude:
+    - lib/surro-gate.rb
+    - spec/surro-gate_spec.rb

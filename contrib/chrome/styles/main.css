@@ -1,0 +1,20 @@
+strong.address:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.error {
+  color: red;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  text-align: center;
+}
+
+.info-messages {
+  font-size: larger;
+}
