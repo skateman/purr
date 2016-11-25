@@ -2,6 +2,7 @@
 
 <img src="https://rawgit.com/skateman/purr/master/logo.svg" width="300" align="right" />
 
+[![Gem Version](https://badge.fury.io/rb/purr.svg)](https://badge.fury.io/rb/purr)
 [![Build Status](https://travis-ci.org/skateman/purr.svg?branch=master)](https://travis-ci.org/skateman/purr)
 [![Dependency Status](https://gemnasium.com/skateman/purr.svg)](https://gemnasium.com/skateman/purr)
 [![Inline docs](http://inch-ci.org/github/skateman/purr.svg?branch=master)](http://inch-ci.org/github/skateman/purr)
