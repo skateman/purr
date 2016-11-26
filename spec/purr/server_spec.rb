@@ -36,8 +36,8 @@ describe Purr::Server do
       {
         'rack.hijack'  => hijack,
         'HTTP_UPGRADE' => upgrade,
-        'PURR_REQUEST' => 'MEOW',
-        'PURR_VERSION' => Purr::VERSION
+        'HTTP_PURR_REQUEST' => 'MEOW',
+        'HTTP_PURR_VERSION' => Purr::VERSION
       }
     end
 
