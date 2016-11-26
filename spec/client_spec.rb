@@ -10,6 +10,7 @@ describe 'Client' do
     let(:driver) do
       switches = %w(--ignore-certificate-errors --disable-popup-blocking --disable-translate)
       switches << "--load-extension=#{path}"
+      Selenium::WebDriver::Chrome.driver_path = ENV['CHROMEDRIVER'] if ENV['CI'] && ENV['CHROMEDRIVER']
       Selenium::WebDriver.for :chrome, :switches => switches
     end
 
