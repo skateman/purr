@@ -74,8 +74,8 @@ module Purr
       <<~HEREDOC.sub(/\n$/, "\n\n").gsub(/ {2,}/, '').gsub("\n", "\r\n")
       HTTP/1.1 101 Switching Protocols
       Upgrade: #{upgrade}
-      PURR_VERSION: #{Purr::VERSION}
-      PURR_REQUEST: MEOW
+      Purr-Version: #{Purr::VERSION}
+      Purr-Request: MEOW
       Connection: Upgrade
       HEREDOC
     end
