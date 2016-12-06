@@ -15,11 +15,11 @@
    viewBox="0 0 885.82677 885.82677"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92pre2 r"
    inkscape:export-filename="/home/dhalasz/Pictures/test2.png"
    inkscape:export-xdpi="50.799999"
    inkscape:export-ydpi="50.799999"
-   sodipodi:docname="last.svg">
+   sodipodi:docname="logo.svg">
   <defs
      id="defs4">
     <linearGradient
@@ -52,16 +52,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.5"
-     inkscape:cx="58.156085"
+     inkscape:cx="-189.84391"
      inkscape:cy="483.25859"
      inkscape:document-units="px"
      inkscape:current-layer="layer2"
      showgrid="false"
      inkscape:snap-global="false"
-     inkscape:window-width="1600"
-     inkscape:window-height="836"
+     inkscape:window-width="1920"
+     inkscape:window-height="1043"
      inkscape:window-x="0"
-     inkscape:window-y="27"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      showguides="true"
      fit-margin-top="10.5"
@@ -77,7 +77,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -107,8 +107,7 @@
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="206"
        y="858.36218"
-       id="text9090"
-       sodipodi:linespacing="125%"><tspan
+       id="text9090"><tspan
          sodipodi:role="line"
          id="tspan9092"
          x="206"
@@ -118,8 +117,7 @@
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="210"
        y="810.36218"
-       id="text9094"
-       sodipodi:linespacing="125%"><tspan
+       id="text9094"><tspan
          sodipodi:role="line"
          id="tspan9096"
          x="210"
@@ -294,17 +292,30 @@
      style="display:inline"
      transform="translate(-7.9999997,6.7952688)"
      sodipodi:insensitive="true">
-    <text
-       xml:space="preserve"
+    <g
+       aria-label="Purr"
        style="font-style:normal;font-weight:normal;font-size:90px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="257.28305"
-       y="746.5144"
-       id="text4156"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan4158"
-         x="257.28305"
-         y="746.5144"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:180px;font-family:'Mr Dafoe';-inkscape-font-specification:'Mr Dafoe'">Purr</tspan></text>
+       id="text4156">
+      <path
+         d="m 380.40305,631.3144 q 7.74,4.32 12.6,11.7 5.04,7.38 5.04,16.56 0,9.18 -11.52,21.06 -11.52,11.88 -28.08,20.34 -16.38,8.28 -28.62,8.28 -12.06,0 -17.46,-10.08 -30.96,41.58 -34.92,50.4 0.18,0.9 0.18,2.52 0,1.8 -1.98,1.8 -1.98,0 -5.22,-3.42 -3.06,-3.24 -3.06,-9.36 0,-1.8 0.18,-2.88 1.62,-11.88 32.94,-46.8 31.5,-34.92 45.36,-42.48 2.88,-1.44 4.32,-1.44 1.44,0 2.88,0.9 1.62,0.9 1.62,2.16 0,1.26 -0.72,1.98 -13.5,14.04 -16.2,17.1 l -21.42,24.84 q -0.36,0.54 -0.36,1.08 0,1.26 1.62,1.26 7.2,0 19.44,-4.14 12.42,-4.14 24.48,-10.26 12.06,-6.3 20.88,-14.58 8.82,-8.46 8.82,-15.66 0,-5.94 -11.34,-8.82 -11.34,-2.88 -24.48,-2.88 -12.96,0 -28.08,3.78 -15.12,3.6 -26.46,9 -11.16,5.4 -20.16,11.34 -9,5.76 -13.68,10.26 -4.5,4.32 -4.5,5.76 0,1.26 1.26,1.26 1.26,0 6.84,-1.8 18,-5.94 35.28,-16.02 1.26,-0.72 1.62,-0.72 0.54,0 0.54,0.54 0,0.36 -2.34,3.42 -2.16,2.88 -6.12,7.2 -3.96,4.14 -8.64,8.1 -4.68,3.96 -10.62,6.84 -5.76,2.7 -11.34,2.7 -5.4,0 -10.8,-4.32 -5.22,-4.5 -5.22,-12.06 0,-7.74 7.56,-16.74 7.56,-9 19.8,-17.1 12.42,-8.1 30.78,-13.68 18.36,-5.58 35.82,-5.58 17.46,0 33.48,8.64 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:180px;font-family:'Mr Dafoe';-inkscape-font-specification:'Mr Dafoe'"
+         id="path3700"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 408.86555,730.4944 q 26.82,-14.4 59.04,-38.34 1.62,1.26 1.62,3.06 0,1.8 -1.8,3.42 -1.8,1.62 -5.22,4.68 -3.24,3.06 -12.6,10.98 -9.36,7.92 -17.46,14.4 -21.24,17.1 -31.32,20.16 -3.24,0.9 -7.02,0.9 -6.12,0 -6.12,-9.54 0,-1.98 1.62,-5.94 1.8,-3.96 1.98,-4.5 0.36,-0.72 0.54,-1.08 0.18,-0.36 0.36,-0.54 0.18,-0.36 0.18,-0.72 0,-0.36 -1.08,-0.36 -0.9,0 -5.94,4.86 -5.04,4.68 -8.46,7.56 -3.24,2.88 -7.56,5.4 -4.14,2.52 -6.84,2.52 -7.2,0 -7.2,-6.66 0,-3.96 2.7,-9.72 6.3,-13.32 18.9,-26.64 12.6,-13.32 18,-13.5 1.98,0 3.6,1.44 1.62,1.44 1.62,3.24 0,1.8 -3.6,5.4 -3.6,3.6 -9.18,9.36 -5.4,5.58 -7.74,9.36 -2.16,3.78 -2.16,5.04 0,1.26 1.44,1.26 1.44,0 5.22,-2.34 10.26,-7.02 23.4,-17.28 13.32,-10.26 17.1,-14.94 0.9,-3.24 5.4,-3.24 8.64,0 8.64,3.06 0,1.26 -8.46,9.36 -25.38,24.3 -25.38,30.06 0,0.9 0.72,0.9 0.9,0 3.06,-1.08 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:180px;font-family:'Mr Dafoe';-inkscape-font-specification:'Mr Dafoe'"
+         id="path3702"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 440.07586,712.8544 q 9.9,-6.84 20.7,-14.76 -5.76,-3.96 -7.38,-7.74 -0.54,-1.26 -0.54,-1.8 0,-3.6 2.34,-4.68 2.34,-1.26 7.56,-1.26 1.98,0 11.7,4.86 9.72,4.86 12.24,4.86 2.7,0 7.38,-1.44 4.68,-1.62 7.38,-1.62 2.88,0 4.14,1.26 4.5,5.94 4.5,7.2 0,1.26 -1.26,2.16 -1.08,0.72 -7.38,5.04 -6.12,4.32 -12.06,8.82 -5.94,4.5 -11.16,10.08 -5.22,5.58 -5.22,9 0,0.54 0.9,0.54 9.72,0 65.52,-39.42 1.26,0 1.26,2.34 0,2.16 -14.22,15.48 -14.22,13.14 -32.22,25.92 -17.82,12.6 -25.92,12.6 -12.6,0 -12.6,-12.6 0,-6.84 4.5,-13.14 4.68,-6.48 19.44,-17.28 -3.06,0 -8.28,-1.44 -5.22,-1.62 -6.66,-3.78 -4.68,4.14 -16.2,13.86 -2.7,1.98 -7.02,1.98 -4.32,0 -4.32,-1.26 0,-1.44 2.88,-3.78 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:180px;font-family:'Mr Dafoe';-inkscape-font-specification:'Mr Dafoe'"
+         id="path3704"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 513.55243,712.8544 q 9.9,-6.84 20.7,-14.76 -5.76,-3.96 -7.38,-7.74 -0.54,-1.26 -0.54,-1.8 0,-3.6 2.34,-4.68 2.34,-1.26 7.56,-1.26 1.98,0 11.7,4.86 9.72,4.86 12.24,4.86 2.7,0 7.38,-1.44 4.68,-1.62 7.38,-1.62 2.88,0 4.14,1.26 4.5,5.94 4.5,7.2 0,1.26 -1.26,2.16 -1.08,0.72 -7.38,5.04 -6.12,4.32 -12.06,8.82 -5.94,4.5 -11.16,10.08 -5.22,5.58 -5.22,9 0,0.54 0.9,0.54 9.72,0 65.52,-39.42 1.26,0 1.26,2.34 0,2.16 -14.22,15.48 -14.22,13.14 -32.22,25.92 -17.82,12.6 -25.92,12.6 -12.6,0 -12.6,-12.6 0,-6.84 4.5,-13.14 4.68,-6.48 19.44,-17.28 -3.06,0 -8.28,-1.44 -5.22,-1.62 -6.66,-3.78 -4.68,4.14 -16.2,13.86 -2.7,1.98 -7.02,1.98 -4.32,0 -4.32,-1.26 0,-1.44 2.88,-3.78 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:180px;font-family:'Mr Dafoe';-inkscape-font-specification:'Mr Dafoe'"
+         id="path3706"
+         inkscape:connector-curvature="0" />
+    </g>
   </g>
 </svg>
