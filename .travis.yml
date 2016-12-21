@@ -1,11 +1,4 @@
 sudo: false
-dist: trusty
-addons:
-  apt:
-    sources:
-    - google-chrome
-    packages:
-    - google-chrome-stable
 language: ruby
 cache: bundler
 rvm:
@@ -13,10 +6,3 @@ rvm:
 before_install:
   - "echo 'gem: --no-ri --no-rdoc --no-document' > ~/.gemrc"
   - "gem install bundler -v 1.13.0"
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
-  - "sleep 3" # give xvfb some time to start
-  - "wget https://chromedriver.storage.googleapis.com/2.25/chromedriver_linux64.zip"
-  - "unzip chromedriver_linux64.zip -d chromedriver"
-env:
-  - CHROMEDRIVER=chromedriver/chromedriver
