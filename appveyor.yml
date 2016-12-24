@@ -1,0 +1,17 @@
+build: off
+environment:
+  nodejs_version: "6.1"
+  matrix:
+    - browser: firefox
+      package: firefox
+    - browser: chrome
+      package: googlechrome
+init:
+  - git config --global core.autocrlf true
+install:
+  - ps: choco install $env:package
+  - ps: Install-Product node $env:nodejs_version
+  - ps: cd extension
+  - yarn install --ignore-optional
+test_script:
+  - ps: yarn test:$env:browser
