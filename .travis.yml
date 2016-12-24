@@ -4,5 +4,8 @@ rvm:
 env:
   matrix:
     - SUITE=server
-before_install: ci/setup.sh ${SUITE}
-script: ci/test.sh ${SUITE}
+before_install: ci/before_install
+before_script: ci/before_script
+install: ci/install
+script: ci/script
+after_script: ci/after_script
