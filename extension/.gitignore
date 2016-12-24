@@ -1,0 +1,18 @@
+# Coverage directory used by tools like istanbul
+/coverage
+# Dependency directories
+/node_modules
+# Optional npm cache directory
+/.npm
+# Yarn lockfile
+/yarn.lock
+# Optional eslint cache
+/.eslintcache
+# Yarn Integrity file
+/.yarn-integrity
+# Temporary folders
+/tmp
+# Generated distfiles
+/dist
+# Output of 'npm pack'
+*.tgz
