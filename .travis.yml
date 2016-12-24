@@ -5,5 +5,4 @@ rvm:
 before_install:
   - "echo 'gem: --no-ri --no-rdoc --no-document' > ~/.gemrc"
   - "gem install bundler -v 1.13.0"
-install: cd server && bundle install && cd ..
 script: cd server && bundle exec rake
