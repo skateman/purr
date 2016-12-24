@@ -1,8 +1,10 @@
-#!/bin/sh
+#!/bin/bash
 
-case $1 in
+case $SUITE in
   "server")
     echo 'gem: --no-ri --no-rdoc --no-document' > ~/.gemrc
+    source $HOME/.rvm/scripts/rvm
+    rvm use $RUBY_VERSION --install --binary --fuzzy
     gem install bundler -v 1.13.0
     ;;
 esac

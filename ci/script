@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 
-case $1 in
+case $SUITE in
   "server")
     cd server
     bundle exec rake

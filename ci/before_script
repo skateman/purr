@@ -1,0 +1,4 @@
+#!/bin/bash
+
+case $SUITE in
+esac
