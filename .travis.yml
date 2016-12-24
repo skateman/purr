@@ -1,10 +1,8 @@
 sudo: false
-rvm:
-  - 2.3.1
 env:
   matrix:
-    - SUITE=server
-before_install: ci/before_install
+    - SUITE=server RUBY_VERSION=2.3.1
+before_install: source ci/before_install
 before_script: ci/before_script
 install: ci/install
 script: ci/script
