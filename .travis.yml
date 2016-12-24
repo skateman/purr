@@ -2,7 +2,8 @@ sudo: false
 cache: bundler
 rvm:
   - 2.3.1
-before_install:
-  - "echo 'gem: --no-ri --no-rdoc --no-document' > ~/.gemrc"
-  - "gem install bundler -v 1.13.0"
-script: cd server && bundle exec rake
+env:
+  matrix:
+    - SUITE=server
+before_install: ci/setup.sh ${SUITE}
+script: ci/test.sh ${SUITE}
