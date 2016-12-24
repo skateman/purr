@@ -5,4 +5,8 @@ case $SUITE in
     cd server
     bundle install
     ;;
+  "extension")
+    cd extension
+    yarn install
+    ;;
 esac

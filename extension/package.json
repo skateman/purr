@@ -5,6 +5,8 @@
   "main": "background.js",
   "scripts": {
     "test": "karma start",
+    "test:firefox": "karma start --browsers Firefox",
+    "test:chrome": "karma start --browsers Chrome",
     "watch": "karma start --auto-watch --no-single-run"
   },
   "repository": {

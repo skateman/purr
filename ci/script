@@ -5,4 +5,8 @@ case $SUITE in
     cd server
     bundle exec rake
     ;;
+  "extension")
+    cd extension
+    yarn test:$BROWSER
+    ;;
 esac
