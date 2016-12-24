@@ -16,8 +16,11 @@ module.exports = function(config) {
     },
     reporters: ['dots', 'coverage'],
     coverageReporter: {
-      type : 'html',
-      dir : 'coverage/'
+      reporters: [
+        { type : 'json', dir : 'coverage' },
+        { type : 'lcovonly', dir : 'coverage' },
+        { type : 'html', dir : 'coverage' }
+      ]
     },
     port: 9876,
     colors: true,

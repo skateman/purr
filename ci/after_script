@@ -1,4 +1,8 @@
 #!/bin/bash
 
 case $SUITE in
+  "extension")
+    cd extension
+    yarn update-coverage
+    ;;
 esac

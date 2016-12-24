@@ -7,6 +7,7 @@
     "test": "karma start",
     "test:firefox": "karma start --browsers Firefox",
     "test:chrome": "karma start --browsers Chrome",
+    "update-coverage": "codecov",
     "watch": "karma start --auto-watch --no-single-run"
   },
   "repository": {
@@ -30,6 +31,7 @@
   "homepage": "https://github.com/skateman/purr#readme",
   "devDependencies": {
     "chai": "^3.5.0",
+    "codecov": "^1.0.1",
     "eslint": "^3.12.2",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
