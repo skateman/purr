@@ -1,4 +1,8 @@
 #!/bin/bash
 
 case $SUITE in
+  "extension")
+    sh -e /etc/init.d/xvfb start
+    sleep 3
+    ;;
 esac

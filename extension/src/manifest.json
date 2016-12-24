@@ -1,0 +1,41 @@
+{
+  "manifest_version": 2,
+
+  "name": "Purr",
+  "description": "Smuggle TCP connections through HTTP",
+  "version": "0.1.0",
+  "author": "Dávid Halász",
+
+  "applications": {
+    "gecko": {
+      "id": "purr@purr.purr"
+    }
+  },
+
+  "icons": "img/icon.png",
+
+  "page_action": {
+    "default_title": "Purr",
+    "default_icon": "img/icon.png"
+  },
+
+  "permissions": [
+    "activeTab",
+    "nativeMessaging"
+  ],
+
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ],
+    "persistent": false
+  },
+
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "run_at": "document_start",
+    "js": [
+      "js/content.js"
+    ]
+  }]
+}

@@ -7,4 +7,11 @@ case $SUITE in
     rvm use $RUBY_VERSION --install --binary --fuzzy
     gem install bundler -v 1.13.0
     ;;
+  "extension")
+    source ~/.nvm/nvm.sh
+    nvm install $NODE_VERSION
+    curl -o- -L https://yarnpkg.com/install.sh | bash
+    export PATH=$HOME/.yarn/bin:$PATH
+    export DISPLAY=:99.0
+    ;;
 esac

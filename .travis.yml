@@ -1,8 +1,18 @@
+dist: trusty
 sudo: false
 language: generic
+addons:
+  apt:
+    sources:
+    - google-chrome
+    packages:
+    - google-chrome-stable
+  firefox: latest
 env:
   matrix:
     - SUITE=server RUBY_VERSION=2.3.1
+    - SUITE=extension NODE_VERSION=6.1 BROWSER=chrome
+    - SUITE=extension NODE_VERSION=6.1 BROWSER=firefox
 before_install: source ci/before_install
 before_script: ci/before_script
 install: ci/install

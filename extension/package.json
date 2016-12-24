@@ -1,0 +1,53 @@
+{
+  "name": "purr-extension",
+  "version": "0.1.0",
+  "description": "Smuggle TCP connections through HTTP",
+  "main": "background.js",
+  "scripts": {
+    "test": "karma start",
+    "test:firefox": "karma start --browsers Firefox",
+    "test:chrome": "karma start --browsers Chrome",
+    "update-coverage": "codecov",
+    "watch": "karma start --auto-watch --no-single-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skateman/purr.git"
+  },
+  "keywords": [
+    "purr",
+    "tcp",
+    "http",
+    "smuggling",
+    "tunneling",
+    "websocket",
+    "proxy"
+  ],
+  "author": "Dávid Halász",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/skateman/purr/issues"
+  },
+  "homepage": "https://github.com/skateman/purr#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "codecov": "^1.0.1",
+    "eslint": "^3.12.2",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-eslint": "^3.0.1",
+    "gulp-image-resize": "^0.11.0",
+    "gulp-json-editor": "^2.2.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-task-listing": "^1.0.1",
+    "karma": "^1.3.0",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-coverage": "^1.1.1",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-mocha": "^1.3.0",
+    "karma-sinon": "^1.0.5",
+    "mocha": "^3.2.0",
+    "sinon": "^1.17.6"
+  }
+}
