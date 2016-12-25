@@ -37,7 +37,13 @@ chrome.runtime.onConnect.addListener((left) => {
   });
 
   // Clean up both endpoints if one of them gets disconnected
-  right.onDisconnect.addListener(() => left.disconnect());
+  right.onDisconnect.addListener(() => {
+    // Deactivate the extension's icon
+    chrome.pageAction.hide(tabid);
+    // Disconnect the client
+    left.disconnect();
+  });
+
   left.onDisconnect.addListener(() => {
     // Decrement the number of connected clients
     right.clients--;
