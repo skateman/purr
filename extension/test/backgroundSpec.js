@@ -146,9 +146,11 @@ describe('background.js', () => {
 
   context('native app gets disconnected', () => {
     before(() => {
-      this.clientA = mockChromeClient(3);
+      this.tabIdA = 3;
+      this.clientA = mockChromeClient(tabIdA);
       chrome.runtime.onConnect.addListener.yield(this.clientA);
-      this.clientB = mockChromeClient(4);
+      this.tabIdB = 4;
+      this.clientB = mockChromeClient(tabIdB);
       chrome.runtime.onConnect.addListener.yield(this.clientB);
     });
 
@@ -157,7 +159,9 @@ describe('background.js', () => {
     it('closes all client connections', () => {
       window._app.onDisconnect.addListener.yield();
       expect(clientA.disconnect.calledOnce).to.be.true;
+      expect(chrome.pageAction.hide.calledWith(tabIdA)).to.be.true;
       expect(clientB.disconnect.calledOnce).to.be.true;
+      expect(chrome.pageAction.hide.calledWith(tabIdB)).to.be.true;
     });
   });
 });
