@@ -48,8 +48,9 @@ chrome.runtime.onConnect.addListener((left) => {
     // Decrement the number of connected clients
     right.clients--;
     // Disconnect the native application if no more clients
-    if (right.clients === 0) right.disconnect();
-    // Deactivate the extension's icon
-    chrome.pageAction.hide(tabid);
+    if (right.clients === 0) {
+      right.disconnect();
+      delete(window._app)
+    }
   });
 });
