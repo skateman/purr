@@ -50,7 +50,7 @@ chrome.runtime.onConnect.addListener((left) => {
     // Disconnect the native application if no more clients
     if (right.clients === 0) {
       right.disconnect();
-      delete(window._app)
+      delete(window._app);
     }
   });
 });
