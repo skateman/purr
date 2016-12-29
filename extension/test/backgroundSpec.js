@@ -86,16 +86,13 @@ describe('background.js', () => {
     context('client disconnected', () => {
       before(() => {
         chrome.pageAction.hide.reset();
+        this.app = window._app;
         this.client.onDisconnect.addListener.yield()
       });
 
       it('closes the native app connection', () => {
-        expect(window._app.disconnect.calledOnce).to.be.true;
-      });
-
-      it('deactivates the extension idon', () => {
-        expect(chrome.pageAction.hide.calledOnce).to.be.true
-        expect(chrome.pageAction.hide.calledWith(tabId)).to.be.true
+        expect(app.disconnect.calledOnce).to.be.true;
+        expect(window._app).to.be.undefined;
       });
     });
   });
@@ -135,10 +132,14 @@ describe('background.js', () => {
       });
 
       context('both clients get disconnected', () => {
-        before(() => this.clientB.onDisconnect.addListener.yield());
+        before(() => {
+          this.app = window._app;
+          this.clientB.onDisconnect.addListener.yield();
+        });
 
         it('closes the connection to the native app', () => {
-          expect(window._app.disconnect.calledOnce).to.be.true;
+          expect(app.disconnect.calledOnce).to.be.true;
+          expect(window._app).to.be.undefined;
         });
       });
     });
