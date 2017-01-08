@@ -1,6 +1,7 @@
 'use strict';
 
 const gulp = require('gulp');
+const fs = require('fs');
 
 const clean = require('gulp-clean');
 const eslint = require('gulp-eslint');
@@ -9,6 +10,7 @@ const rename = require('gulp-rename');
 const resize = require('gulp-image-resize');
 const tasks = require('gulp-task-listing');
 const karma = require('karma');
+const zip = require('gulp-zip');
 
 const icons = (platform, main, page) => {
   const generate = (set) => set.reduce((obj, size) => {
@@ -36,7 +38,8 @@ gulp.task('lint', () =>
 );
 
 gulp.task('build', ['lint', 'build:firefox', 'build:chrome']);
-gulp.task('clean', () => gulp.src('tmp', { read: false }).pipe(clean()));
+gulp.task('pack', ['pack:chrome', 'pack:firefox']);
+gulp.task('clean', () => gulp.src(['tmp', 'dist'], { read: false }).pipe(clean()));
 gulp.task('watch', () => gulp.watch(['src/*.js', 'test/*.js'], ['test', 'build']));
 
 gulp.task('test', (done) => {
@@ -66,4 +69,14 @@ gulp.task('build:chrome', () => {
 
   gulp.src('src/*.js')
     .pipe(gulp.dest('tmp/chrome/js'));
+});
+
+['chrome', 'firefox'].forEach((browser) => {
+  gulp.task(`pack:${browser}`, [`build:${browser}`], () => {
+    var files = [`tmp/${browser}/**`];
+    if (browser == 'chrome' && fs.existsSync('key.pem')) {
+      files.push('key.pem');
+    }
+    gulp.src(files).pipe(zip(`purr-${browser}.zip`)).pipe(gulp.dest('dist/'));
+  });
 });
