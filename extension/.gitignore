@@ -16,3 +16,5 @@
 /dist
 # Output of 'npm pack'
 *.tgz
+# Chrome Store signing key
+/key.pem
