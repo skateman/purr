@@ -1,0 +1,9 @@
+{
+  "name": "purr",
+  "description": "Smuggle TCP connections through HTTP",
+  "path": "PURR_PATH",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://kbobleenjfbacnajgodnjbbnekmocooh/"
+  ]
+}

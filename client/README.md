@@ -1,24 +1,20 @@
 # Purr Client
 
-This is the client part of Purr, a Chrome App extension responsible for smuggling TCP traffic through HTTP connections.
+This is the client part of Purr, a TCP-to-HTTP/TCP proxy implemented in Go. It was implemented to be able to interact with [Web Extensions](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/What_are_WebExtensions) using [Native Messaging](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Native_messaging).
 
 ## Installation
-
-Currently, the client is available as a Chrome App only and it requires manual installation. It is available under the `client` folder and it needs to be installed manually.
-
-## Usage
-The client can be invoked by pointing your browser to an URL in the form: `http://purr/<URL>`
-
-Where the `<URL>` is an URL encoded using [`encodeURIComponent`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) pointing to the server described above.
-
-Because the client catches the URL, it will never appear in the browser's address bar. Therefore, it is not recommended to use `window.open` or `window.location.href` for invoking the client as it will create an empty window. A better solution is to use `window.location.assign` from and existing window with "useful data":
-
-```js
-window.location.assign(`http://purr/${encodeURIComponent('http://example.com/vnc?id=1234')}`)
+To build the client, a Go compiler v1.6+ is required. To create the binary file with the name `purr`, simply run:
+```sh
+go build -o purr
 ```
 
+After the binary is created, the browser needs to be configured to allow its execution. This can be done creating a manifest file in a folder that varies by browser and/or platform. You can read about where to put manifest files for [Chrome/Chromium](https://developer.chrome.com/extensions/nativeMessaging#native-messaging-host-location) and for [Firefox](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Native_messaging#App_manifest_location). There are sample manifests for each browser under the `manifests` folder. Simply choose one of them based on your browser preference and copy it to the adjacent location with the name `purr.json`. You will have to manually edit this newly created file and replace `PURR_PATH` with the absolute path to the client binary.
+
+## Usage
+The client is not designed for standalone usage, rather to be called from the browser using the extension and the frontend library.
+
 ## Development
-Support for Chrome Apps will be [retired](https://blog.chromium.org/2016/08/from-chrome-apps-to-web.html) on other platforms than ChromeOS and this client might get completely unsupported in future versions of Chrome. It is planned to implement the client using a different approach in the future.
+Unfortunately, there is no development setup nor tests for this part of the application.
 
 ## Contributing
 
