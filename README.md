@@ -12,7 +12,9 @@
 
 Purr is a TCP-over-HTTP solution which consists:
 - a Rack-based web server implemented in Ruby
-- a Chrome App client implemented in ES6
+- a desktop client application written in Go
+- a browser extension with the ability to interact with the client
+- a JS library functioning as the control interface of the extension (TODO)
 
 Using Purr it's possible to "smuggle" any kind of TCP traffic (SSH, VNC, etc.) through an HTTP connection.
 
