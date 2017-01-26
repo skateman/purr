@@ -16,7 +16,7 @@ type nativeRequest struct {
 type nativeResponse struct {
   Destination uint `json:"dst"`
   SeqNum uint `json:"seq"`
-  Status string `json:"status`
+  Status string `json:"status"`
   Details interface{} `json:"args"`
 }
 
