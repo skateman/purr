@@ -31,14 +31,7 @@ func (proxy *Proxy) Close() {
 
 func (proxy *Proxy) handle(target *HttPurr) {
   // Upgrade the HTTP connection
-  payload, err := target.Upgrade(proxy.Destination)
-  if err != nil {
-    proxy.Close()
-    return
-  }
-
-  // Flush the payload to the source connection
-  _, err = proxy.Source.Write(payload)
+  err := target.Upgrade(proxy.Destination)
   if err != nil {
     proxy.Close()
     return

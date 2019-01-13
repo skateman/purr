@@ -42,28 +42,23 @@ func newHttPurr(url string) (*HttPurr, error) {
   return httpurr, nil
 }
 
-func (httpurr *HttPurr) Upgrade(conn net.Conn) ([]byte, error) {
+func (httpurr *HttPurr) Upgrade(conn net.Conn) (error) {
   // Send the HTTP upgrade request
   _, err := conn.Write(httpurr.Request)
   if err != nil {
-    return nil, err
+    return err
   }
 
   // Fetch the HTTP response
   buffer := make([]byte, 512)
   _, err = conn.Read(buffer)
+
   if err != nil {
-    return nil, err
+    return err
   }
 
-  // Parse the HTTP response and retrieve its length
-  offset, err := parseResponse(buffer)
-  if err != nil {
-    return nil, err
-  }
-
-  // Return with any data following the HTTP response
-  return buffer[offset:], nil
+  // Parse the HTTP response
+  return parseResponse(buffer)
 }
 
 func validateResponse(response http.Response) error {
@@ -80,24 +75,13 @@ func validateResponse(response http.Response) error {
   return nil
 }
 
-func parseResponse(body []byte) (uint, error) {
+func parseResponse(body []byte) (error) {
   io := bufio.NewReader(bytes.NewReader(body))
   // Parse the HTTP response
   res, err := http.ReadResponse(io, nil)
   if err != nil {
-    return 0, err
+    return err
   }
   defer res.Body.Close()
-  err = validateResponse(*res)
-  if err != nil {
-    return 0, err
-  }
-  // Convert back the response to bytes to determine its length
-  dump, err := httputil.DumpResponse(res, false)
-  if err != nil {
-    return 0, err
-  }
-  // The response is automatically extended with Content-Length which needs to be ignored
-  offset := len(dump) - 19
-  return uint(offset), nil
+  return validateResponse(*res)
 }
