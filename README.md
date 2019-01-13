@@ -4,7 +4,6 @@
 
 [![Gem Version](https://badge.fury.io/rb/purr.svg)](https://badge.fury.io/rb/purr)
 [![Build Status](https://travis-ci.org/skateman/purr.svg?branch=master)](https://travis-ci.org/skateman/purr)
-[![Dependency Status](https://gemnasium.com/skateman/purr.svg)](https://gemnasium.com/skateman/purr)
 [![Inline docs](http://inch-ci.org/github/skateman/purr.svg?branch=master)](http://inch-ci.org/github/skateman/purr)
 [![Code Climate](https://codeclimate.com/github/skateman/purr/badges/gpa.svg)](https://codeclimate.com/github/skateman/purr)
 [![codecov](https://codecov.io/gh/skateman/purr/branch/master/graph/badge.svg)](https://codecov.io/gh/skateman/purr)
