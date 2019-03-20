@@ -24,9 +24,9 @@ func newHttPurr(url string) (*HttPurr, error) {
   // Set the HTTP request headers
   req.Header.Add("Upgrade", "purr")
   req.Header.Add("Purr-Request", "MEOW")
-  req.Header.Add("Purr-Version", "0.1.1")
+  req.Header.Add("Purr-Version", "0.1.2")
   req.Header.Add("Connection", "Upgrade")
-  req.Header.Add("User-Agent", "Purr Client 0.1.1")
+  req.Header.Add("User-Agent", "Purr Client 0.1.2")
 
   // Convert the request into a binary slice
   dump, _ := httputil.DumpRequestOut(req, false)
