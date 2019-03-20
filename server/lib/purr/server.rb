@@ -106,7 +106,7 @@ module Purr
       sockets.compact!
       # Close the opened sockets and remove them from the proxy
       sockets.each { |sock| sock.close unless sock.closed? }
-      @proxy.pop(*sockets)
+      @proxy.pop(*sockets) if sockets.length > 1
     end
 
     def logger(env, level, message)
