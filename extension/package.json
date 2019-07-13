@@ -1,6 +1,6 @@
 {
   "name": "purr-extension",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Smuggle TCP connections through HTTP",
   "main": "background.js",
   "scripts": {
