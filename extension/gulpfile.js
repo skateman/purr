@@ -32,13 +32,11 @@ const icons = (platform, main, page) => {
 };
 
 gulp.task('help', tasks);
-gulp.task('default', ['help']);
+gulp.task('default', gulp.series('help'));
 gulp.task('lint', () =>
   gulp.src('src/*.js').pipe(eslint()).pipe(eslint.format())
 );
 
-gulp.task('build', ['lint', 'build:firefox', 'build:chrome']);
-gulp.task('pack', ['pack:chrome', 'pack:firefox']);
 gulp.task('clean', () => gulp.src(['tmp', 'dist'], { read: false }).pipe(clean()));
 gulp.task('watch', () => gulp.watch(['src/*.js', 'test/*.js'], ['test', 'build']));
 
@@ -72,7 +70,7 @@ gulp.task('build:chrome', () => {
 });
 
 ['chrome', 'firefox'].forEach((browser) => {
-  gulp.task(`pack:${browser}`, [`build:${browser}`], () => {
+  gulp.task(`pack:${browser}`, gulp.series(`build:${browser}`), () => {
     var files = [`tmp/${browser}/**`];
     if (browser == 'chrome' && fs.existsSync('key.pem')) {
       files.push('key.pem');
@@ -80,3 +78,6 @@ gulp.task('build:chrome', () => {
     gulp.src(files).pipe(zip(`purr-${browser}.zip`)).pipe(gulp.dest('dist/'));
   });
 });
+
+gulp.task('build', gulp.series('lint', gulp.parallel('build:firefox', 'build:chrome')));
+gulp.task('pack', gulp.parallel('pack:chrome', 'pack:firefox'));
