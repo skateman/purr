@@ -11,8 +11,8 @@ addons:
 env:
   matrix:
     - SUITE=server RUBY_VERSION=2.3.1
-    - SUITE=extension NODE_VERSION=6.1 BROWSER=chrome
-    - SUITE=extension NODE_VERSION=6.1 BROWSER=firefox
+    - SUITE=extension NODE_VERSION=10 BROWSER=chrome
+    - SUITE=extension NODE_VERSION=10 BROWSER=firefox
 before_install: source ci/before_install
 before_script: ci/before_script
 install: ci/install
